@@ -1,5 +1,0 @@
-Dotenv-python
-Streamlit
-Firebase_admin
-PyPDF2
-Langchain
