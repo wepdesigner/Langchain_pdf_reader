@@ -1,0 +1,7 @@
+langchain
+PyPDF2
+python-dotenv
+streamlit
+Firebase_admin
+faiss-cpu
+streamlit_option_menu
