@@ -15,7 +15,7 @@ from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 
 cred = credentials.Certificate("langchain-pdf-reader-51b106fd5fc6.json")
-firebase_admin.initialize_app(cred)
+# firebase_admin.initialize_app(cred)
 
 def main():
     load_dotenv()
