@@ -6,3 +6,4 @@ Firebase_admin
 faiss-cpu
 streamlit_option_menu
 openai
+tiktoken
