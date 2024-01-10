@@ -35,7 +35,7 @@ def main():
                    
                   ''')
         
-      page_bg_img = """
+    page_bg_img = """
     <style>
     [data-testid="stApp"] {
         background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Flightpdf.com%2Fdark-mode-pdf-reader.html&psig=AOvVaw0nX67S766Oe1gG0lcvEIgz&ust=1704966073918000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIi19fzE0oMDFQAAAAAdAAAAABAD");
