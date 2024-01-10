@@ -126,7 +126,7 @@ def main():
     </style>
     """
       
-    
+    st.markdown(page_bg_img, unsafe_allow_html = True)
           
           
     st.title(':red[STECHCO]📚 chat app')
