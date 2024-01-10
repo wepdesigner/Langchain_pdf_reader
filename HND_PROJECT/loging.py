@@ -24,21 +24,107 @@ def main():
           
     st.set_page_config(
       page_title="STECHCO",
-      page_icon="😊",
+      page_icon="📚",
       )
     # sidebar content
     with st.sidebar:
       
-      st.title('👀🎈 LLM STECHCO Chat App')
+      st.title('STECHCO📚 Chat App')
+      st.text('')
       st.markdown('''
-                  # About
-                  This app is an LLM-powered chatbot build using:
-                  - [Streamlit](https://streamlit.io/)
-                  - [Langchain](https://python.langchain.com/)
-                  - [OpenAI](https://platform.openai.com/docs/models)  LLM model
+                   
                   ''')
-      
-      
+        
+      page_bg_img = """
+    <style>
+    [data-testid="stApp"] {
+        background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Flightpdf.com%2Fdark-mode-pdf-reader.html&psig=AOvVaw0nX67S766Oe1gG0lcvEIgz&ust=1704966073918000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIi19fzE0oMDFQAAAAAdAAAAABAD");
+        background-size: cover;
+        
+    }
+    
+    [data-testid="stHeader"] {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    
+    [data-testid="stToolbar"] {
+        background-color: rgba(255, 255, 255, 0);
+        right: 2rem;
+    }
+    
+    [data-testid="stMainMenu"]:hover {
+        border-radius: 5rem;
+        background-color: rgb(255, 1, 1);
+        color: rgba(5, 44, 44);
+    }
+    
+    [data-testid="collapsedControl"] {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    
+    [data-testid="baseButton-headerNoPadding"] {
+        background-color: rgb(111, 178, 241);;
+      }
+    
+    [data-testid="baseButton-header"] {
+        display: inline-block;
+        cursor: pointer;
+        padding: 1rem;
+        border: rgb(255, 1, 1);
+        font-size: 15px;
+        color: rgb(255, 255, 255,);
+        text-align: center;
+        text-transform: capitalize;
+        transition: .2s linear;
+    }
+    
+    [data-testid="textInputRootElement"] {
+        height: 40px;
+        width: 95%;
+        border-radius: 7px;
+        outline: none;
+        border: 1px solid #808080;
+        padding: 0 10px;
+    }
+    [data-testid="stWidgetLabel"] {
+        height: 40px;
+        width: 95%;
+        border-radius: 7px;
+        outline: none;
+        border: 0px solid #808080;
+        padding: 0 10px;
+        margin-right: 20px;
+    }
+    
+    [data-testid="stMarkdownContainer"] {
+        margin-left: 20px;
+    }
+    
+    
+    [data-testid="baseButton-header"]:hover{
+    border-radius: 5rem;
+    background-color: rgb(255, 1, 1);
+    color: rgba(5, 44, 44);
+    }
+    [data-testid="stSidebar"] {
+        background-color: rgb(83, 172, 255);;
+        background-size: cover;
+    }
+    [data-testid="stButton"] {
+        display: inline-block;
+        cursor: pointer;
+        padding: 1rem 3rem;
+        font-size: 1.8rem;
+        color: var(--sub-color);
+        text-align: center;
+        text-transform: capitalize;
+        transition: .2s linear;
+        margin-top: 1rem;
+        margin: auto;
+    }
+    
+    </style>
+    """
       
     
           
@@ -87,14 +173,14 @@ def main():
         
     
     if  not st.session_state["signedout"]: # only show if the state is False, hence the button has never been clicked
-        choice = st.selectbox('Login/Signup',['Login','Sign up'])
-        email = st.text_input('Email Address')
-        password = st.text_input('Password',type='password')
+        choice = st.selectbox(':red[Login/Signup]',['Login','Sign up'])
+        email = st.text_input(':red[Email Address]', placeholder= 'enter your email')
+        password = st.text_input(':red[Password]', placeholder='enter your password',type='password')
         
 
         
         if choice == 'Sign up':
-            username = st.text_input("Enter  your unique username")
+            username = st.text_input(":red[Enter  your unique username]",placeholder='Username' )
             
             if st.button('Create my account'):
                 user = auth.create_user(email = email, password = password,uid=username)
